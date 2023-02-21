@@ -18,7 +18,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DATABASE_URL = "postgresql://postgres:YbJ522QFmILVZ0w8iUiZ@containers-us-west-196.railway.app:7339/railway"
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -29,7 +28,6 @@ SECRET_KEY = 'django-insecure-ww!qs-g1p^9^1+wd4c=l2i10us4ohj%7yb$b+j4!s^t^h@w(bt
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -74,21 +72,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': 'railway',
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'YbJ522QFmILVZ0w8iUiZ',
-        # 'HOST': 'containers-us-west-196.railway.app',
-        # 'PORT': '7339',
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'YbJ522QFmILVZ0w8iUiZ',
+        'HOST': 'containers-us-west-196.railway.app',
+        'PORT': '7339',
+    }
 
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -108,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -121,7 +117,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
