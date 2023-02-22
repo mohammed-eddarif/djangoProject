@@ -11,12 +11,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+# import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = "postgresql://postgres:YbJ522QFmILVZ0w8iUiZ@containers-us-west-196.railway.app:7339/railway"
+# DATABASE_URL = "postgresql://postgres:YbJ522QFmILVZ0w8iUiZ@containers-us-west-196.railway.app:7339/railway"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'YbJ522QFmILVZ0w8iUiZ',
-        'HOST': 'containers-us-west-196.railway.app',
-        'PORT': '7339',
+        'PASSWORD': 'QYofOQ5EmlQdMsnSYwmX',
+        'HOST': 'containers-us-west-119.railway.app',
+        'PORT': '5569',
     }
 
 }
